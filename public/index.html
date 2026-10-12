@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Internship Board</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>Internship Board</h1>
+<input id="search" placeholder="Search title or company" maxlength="50" aria-label="Search">
+<div id="status" role="status" aria-live="polite"></div>
+<ul id="list"></ul>
+<h2>Apply</h2>
+<form id="form" novalidate>
+  <label>Internship <select name="internshipId" id="internship"></select></label>
+  <span class="err" data-for="internshipId"></span>
+  <label>Name <input name="name" maxlength="80" autocomplete="name"></label>
+  <span class="err" data-for="name"></span>
+  <label>Email <input name="email" type="email" maxlength="120" autocomplete="email"></label>
+  <span class="err" data-for="email"></span>
+  <label>Message <textarea name="message" rows="4" maxlength="1000"></textarea></label>
+  <span class="err" data-for="message"></span>
+  <span class="err" data-for="_form"></span>
+  <button type="submit" id="submit">Submit application</button>
+  <div id="formStatus" role="status" aria-live="polite"></div>
+</form>
+</main>
+<script src="validate.js"></script>
+<script src="app.js"></script>
+</body></html>

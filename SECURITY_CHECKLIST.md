@@ -1,0 +1,11 @@
+# Security Checklist
+- [x] Server-side validation (zod, strict: unknown fields rejected)
+- [x] Client-side validation (shared rules, UX only)
+- [x] Parameterized queries everywhere (`?` placeholders, no string concatenation)
+- [x] Rate limiting: 100/min on /api, 5/min on POST /api/applications
+- [x] Secure headers via helmet (CSP, nosniff, no x-powered-by)
+- [x] Body size limit 10kb; invalid JSON and oversize handled
+- [x] Output rendered with textContent (no innerHTML, prevents XSS)
+- [x] Generic error messages (no stack traces to client)
+- [x] No secrets in repo; same-origin only (no open CORS)
+- [x] Submit button disabled while pending (no double submit)
